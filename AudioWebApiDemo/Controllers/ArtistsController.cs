@@ -22,7 +22,6 @@ namespace AudioWebApiDemo.Controllers
         
         public async Task<Artist> getArtistFromAPI(string artistInput)
         {
-            //var searchedArtist = Request.Query.FirstOrDefault(q => q.Key.Equals("name")).Value;
             using var client = new HttpClient()
             {
                 BaseAddress = new Uri("https://theaudiodb.p.rapidapi.com")
