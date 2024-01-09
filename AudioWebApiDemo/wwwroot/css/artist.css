@@ -1,0 +1,17 @@
+﻿body {
+    
+}
+
+.artist-header{
+    margin-top: 10px;
+    margin-bottom:50px;
+    font-size:100px;
+    background-color: darkseagreen;
+    text-align:center;
+    border-radius: 25px;
+}
+.artist-bio {
+    background-color: darkseagreen;
+    font-size: 20px;
+    border-radius: 5px;
+}

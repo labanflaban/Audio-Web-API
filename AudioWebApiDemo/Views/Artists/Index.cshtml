@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/artist.css" asp-append-version="true" />
+@model AudioWebApiDemo.Models.Artist
+
+@{
+    ViewData["Title"] = "Artist Page";
+}
+
+<h1>Search for any artists</h1>
+
+<p>This is the artists index view </p>
+
+<form asp-action="Index" method="get">
+    <div>
+        <label for="searchArtist">Artist to look for:</label>
+        <input type="text" name="searchArtist" value="" />
+        <input type="Submit" value="Search Artist" /><br />
+
+    </div>
+</form>
+
+<div class="artist-header">
+    <p>
+        @Html.DisplayFor(modelItem => modelItem.strArtist)
+    </p>
+</div>
+<div>
+    <img src=@Model.strArtistBanner/>
+</div>
+<div>
+    <h2>@Model.strArtist's Bio</h2>
+    <p class = "artist-bio">
+        @Html.DisplayFor(modelItem => modelItem.strBiographyEN)
+    </p>
+</div>
+<div>
+    @Html.DisplayFor(modelItem => modelItem.strWebsite)
+
+</div>
+
